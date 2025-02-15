@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
-
 <body>
 
     <!-- ID REFERENCIAR COM "#" no CSS (NÃO PODE REPETIR) --->
@@ -20,32 +19,32 @@
         <!-- Menu desktop -->
         <nav class="header-nav">
             <ul class="menu menu-principal"> <!-- Lista não ordenada -->
-                <li class="menu-item"> <a href="#home" class="menu-link">
-                    <span class="menu-texto">Home</span>
+                <li class="menu-item"> <a href="#home" class="menu-link active">
+                        <span class="menu-texto">Home</span>
                     </a>
                 </li>
 
                 <li class="menu-item"> <a href="#projetos" class="menu-link">
-                    <span class="menu-texto">Projetos</span>
+                        <span class="menu-texto">Projetos</span>
                     </a>
                 </li>
 
                 <li class="menu-item"> <a href="#sobre" class="menu-link">
-                    <span class="menu-texto">Sobre</span>
+                        <span class="menu-texto">Sobre</span>
                     </a>
                 </li>
 
                 <li class="menu-item"> <a href="#contatos" class="menu-link">
-                    <span class="menu-texto">Contatos</span>
+                        <span class="menu-texto">Contatos</span>
                     </a>
-                </li> 
+                </li>
             </ul>
         </nav>
 
         <div> <!-- Logo -->
             <a href="">
                 <img src="" alt="">
-                <i class="bi bi-sun"> </i>
+                <!-- <i class="bi bi-sun"> </i> -->
 
             </a>
         </div>
@@ -55,7 +54,35 @@
         </div>
     </header>
 
-
+    <!-- Menu mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+            <li class="menu-item">
+                <a href="#home" class="menu-link active">
+                    <i class="menu-icone bi bi-house-door"></i>
+                    <span class="menu-texto">Home</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#projetos" class="menu-link">
+                    <i class="menu-icone bi bi-images"></i>
+                    <span class="menu-texto">Projetos</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#sobre" class="menu-link">
+                    <i class="menu-icone bi bi-person"></i>
+                    <span class="menu-texto">Sobre</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#contatos" class="menu-link">
+                    <i class="menu-icone bi bi-envelope"></i>
+                    <span class="menu-texto">Contatos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 
