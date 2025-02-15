@@ -40,6 +40,7 @@ button{
     padding: 8px 20px;
     border: 2px solid var(--cor-body);   
     text-transform: uppercase;
+    cursor:pointer;
 }
 #header{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
