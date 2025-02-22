@@ -37,6 +37,11 @@
 html[data-theme='light'] .logo{
     filter:invert(1);
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 background: var(--bg-header);
 color: var(--icone-tema);
@@ -57,16 +62,6 @@ i{
     font-size: 20px;
     
 }
-/* button{
-    background: var(--bg-header);
-    color: var(--icone-tema);
-    border-radius: 50px;
-    font-size: 20px;
-    padding: 8px 20px;
-    border: 2px solid var(--cor-body);   
-    text-transform: uppercase;
-    cursor:pointer;
-} */
 #header{
 font-family: 'Roboto';
 display: flex;
@@ -169,10 +164,7 @@ z-index: 2;
     gap: 25px;
 }
 
-/* ATUALIZAÇÕES FUTURAS */
-#home{
-    padding: 32px 16px;
-}
+
 
 /* BTN */
 .btn{
@@ -186,7 +178,6 @@ z-index: 2;
     border: none;
     padding: 8px 10px ;
     cursor: pointer;
-    color: var(--btn-color);
     
 }
 .btn-primary{
@@ -194,24 +185,59 @@ z-index: 2;
 }
 .btn span{
     color: var(--btn);
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 .btn i{
-    font-size: 18px;
+    font-size: 14px;
 
 }
 a{
     text-decoration: none;   
 }
 .btn:hover{
-    transform: scale(0.01);
+    transform: scale(1.01);
     transition: ease-in-out .4s;
     /* transform: rotate(180deg);  Roda o texto */
 }
 .btn:hover span{
     color: var(--hover);
 }
+
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+/* ATUALIZAÇÕES FUTURAS */
+#home, .projetos, .sobre, .contatos{
+    padding: 32px 16px;
+}
+/* Projetos */
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    
+}
+.projeto-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.projeto-card{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.card-img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 6px 55px #ac3030;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+}
+
 
 /* Responsive CSS */
 /* 768px  */
