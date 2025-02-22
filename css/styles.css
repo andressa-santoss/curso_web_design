@@ -1,10 +1,18 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"]{
     --bg-header: #222;
     --icone-tema: #f0f0f0;
-    --cor-texto:#222;
+    --cor-texto:#f0f0f0;
     --cor-body: #f0f0f0;
+    
+    --text-menu-menu: #f0f0f0;
+    --text-menu-hover: #f0f0f0;
+    --btn:#f0f0f0;
+    --hover:#b5b5b5;
   
 }
 
@@ -12,8 +20,13 @@
 :root[data-theme="light"]{
     --bg-header:#f0f0f0 ;
     --icone-tema: #222 ;
-    --cor-texto:#f0f0f0;
+    --cor-texto:#222;
     --cor-body: #222;
+
+    --text-menu-menu: #222;
+    --text-menu-hover: #222;
+    --btn:#222;
+    --hover:#110c0c65;
 }
 
 *{
@@ -21,10 +34,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+html[data-theme='light'] .logo{
+    filter:invert(1);
+}
 body{
 background: var(--bg-header);
 color: var(--icone-tema);
 
+}
+h1{
+    font-size: 40px;
+    font-weight: 200;
+    font-family: 'Nunito Sans';
+    letter-spacing: -2px;
+}
+b{
+    font-weight: 800;
 }
 
 i{
@@ -32,7 +57,7 @@ i{
     font-size: 20px;
     
 }
-button{
+/* button{
     background: var(--bg-header);
     color: var(--icone-tema);
     border-radius: 50px;
@@ -41,9 +66,9 @@ button{
     border: 2px solid var(--cor-body);   
     text-transform: uppercase;
     cursor:pointer;
-}
+} */
 #header{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Roboto';
 display: flex;
 flex-flow: row wrap;
 justify-content: space-between;
@@ -53,6 +78,11 @@ width: 100%;
 padding: 8px 16px;  /* 1° valor altura | 2° valor largura | sentido horário*/
 z-index: 2;
 }
+.header-logo .logo{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+}
 
 .menu{
     display: flex;
@@ -61,6 +91,7 @@ z-index: 2;
     gap: 25px;  /* Separa um vão entre os elementos */
     list-style: none;
 }
+
 .menu-mobile{
     width: 100vw;
     position: fixed;
@@ -94,12 +125,13 @@ z-index: 2;
 .menu-link:hover .menu-icone,
 .menu-link:hover .menu-texto
 {
-  color: #f5f5f5;  
+  color: var(--text-menu-menu);  
+  font-weight: 800;
 }
 /* icone não selecionados ficam nesta cor */
 .menu-icone, .menu-texto{
-    color:var(--cor-body);
-    font-family:Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    font-family:'Roboto'
     
 }
 /* animação ao passar o mouse por cima do texto e icone = aumenta o tamanho */
@@ -135,7 +167,6 @@ z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* ATUALIZAÇÕES FUTURAS */
@@ -143,8 +174,44 @@ z-index: 2;
     padding: 32px 16px;
 }
 
+/* BTN */
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 10px ;
+    cursor: pointer;
+    color: var(--btn-color);
+    
+}
+.btn-primary{
+    border: 1px solid var(--btn);
+}
+.btn span{
+    color: var(--btn);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.btn i{
+    font-size: 18px;
 
-
+}
+a{
+    text-decoration: none;   
+}
+.btn:hover{
+    transform: scale(0.01);
+    transition: ease-in-out .4s;
+    /* transform: rotate(180deg);  Roda o texto */
+}
+.btn:hover span{
+    color: var(--hover);
+}
 
 /* Responsive CSS */
 /* 768px  */
