@@ -237,6 +237,12 @@ a{
     object-position: center;
     pointer-events: none;
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+}
 
 
 /* Responsive CSS */
@@ -264,6 +270,19 @@ a{
         align-items: flex-start;
     
     }
+}
+/* 992 */
+@media (min-width: 992px) {
+    .projeto-card{
+        flex-direction:row;
+    }
+    .card-img{
+        width: 55%;
+    }
+    .card-body{
+        justify-content: center;
+    }
+    
 }
 /* 1200px */
 @media (min-width: 1200px){
