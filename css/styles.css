@@ -219,50 +219,66 @@ a{
     padding: 32px 16px;
 }
 /* Projetos */
-.projetos{
+.projetos {
     display: flex;
     flex-direction: column;
     gap: 32px;
-
-    
 }
-.projeto-container{
+
+.projeto-container {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-.projeto-card{
+
+.projeto-card {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.card-img{
+
+.card-img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 5px 6px 55px #44449c60;
-    object-fit: contain;
+    box-shadow: 2px 5px 10px rgb(234, 234, 234);
+    object-fit: cover;
     object-position: center;
     pointer-events: none;
 }
-.card-body{
+
+.card-body {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 5px;
+    gap: 25px;
 }
-.card-title{
-    font-family: 'Nunito Sans';
-    font-size: 30px;
+
+.card-title { 
+    font-family: "Roboto", serif;
+    font-size: 25px;
+    font-weight: 600;
 }
-.card-lista{
+
+.card-description {
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.card-lista {  
+    /* UL */
     list-style: none;
+    font-family: 'Roboto';
 }
-.icone-seta{
-    color: aqua;
+
+.icone-seta {
+    color: cyan;
     font-size: 14px;
 }
-.card-item{
+
+.card-item {  
+    /* Li */
     margin-left: 10px;
     font-size: 18px;
     margin-bottom: 5px;
@@ -270,55 +286,58 @@ a{
 
 
 
-/* Responsive CSS */
-/* 768px  */
-@media (min-width: 768px) {
+
+/* CSS Responsivo */
+@media (min-width: 768px) {  /* a partir de: 768px */
     #header {
         position: fixed;
-        border-bottom: 1px solid var(--cor-body);
+        border-bottom: 1px solid var(--cor-borda);
         padding: 16px 80px;
         background: var(--bg-header);
     }
-    .nav-mobile{
+    .nav-mobile {
         display: none;
     }
-    .header-nav{
+    .header-nav {
         display: flex;
     }
-
-    #home{
-        padding: 128px 9px 64px 96px;
+    #home {
+        padding: 128px 96px 64px 96px; /* VOLTAR AQUI */
     }
-    .main-content{
+    .main-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-    
     }
 }
-/* 992 */
+
+/* 992px */
 @media (min-width: 992px) {
-    .projeto-card{
-        flex-direction:row;
+    
+    .projeto-card {
+        flex-direction: row;
     }
-    .card-img{
+
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    
+    .card-img {
         width: 55%;
     }
-    .card-body{
-        justify-content: center;
-    }
-    
-}
-/* 1200px */
-@media (min-width: 1200px){
-    #home{
-        padding: 160px 96px 32px;
 
+}
+
+
+/* 1200px */
+@media (min-width: 1200px) {
+    #home {
+        padding: 160px 96px 32px;
     }
 }
-/* 1400px */
-/* @media (min-width: 1400px){
-    #header{
+@media (min-width: 1400px) {
+    /* #header {
         padding: 192px 240px 64px;
-    }
-} */
+    } */
+}
