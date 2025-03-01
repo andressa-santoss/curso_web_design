@@ -324,6 +324,7 @@ a{
     align-items: flex-start;
     justify-content: flex-start;
     gap: 32px;
+    margin-bottom: 120px;
 }
 .sobre-perfil {
     width: 100%;
@@ -366,6 +367,9 @@ a{
     flex-direction: column;
     gap: 10px;
 }
+.row2 .sobre-lista{
+    margin-left: 20px;
+}
 
 /* accordion - INICIO */
 
@@ -406,9 +410,13 @@ a{
 .accordion-item.active .bi-caret-down-fill{
     transform: rotate(180deg);
 }
-.accordion-header .end
-.accordion-item.active .end{
-    border-radius: 0 0 10px 10px;
+
+.accordion-header .start{
+    border-radius: 5px 5px 0 0;
+}
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0 0 5px 5px;
 }
 
 
