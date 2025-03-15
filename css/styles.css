@@ -480,9 +480,9 @@ footer a:hover{
     height: 40vh;
     overflow: hidden;  /*controlar o que estiver ao redor*/
     position: relative; /*permite mover a caixa */
-    border-radius: 50px;
+    border-radius: 12px;
     margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(237, 237, 237, 0.2);
 }
 .slides{
     display: flex;
@@ -494,7 +494,48 @@ footer a:hover{
 }
 .slide img{
     width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 12px;
 }
+/* Oculta o display */
+.carousel input{
+    display: none;
+}
+
+/* Mudar os slides com os radios buttons */
+#slide1:checked~.slides{transform:translate(0);}
+#slide2:checked~.slides{transform:translate(-33.33%);}
+#slide3:checked~.slides{transform:translate(-66.66%);}
+
+/*.Botão de navegação  */
+.navigation{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.navigation label{
+    width: 12px;
+    height: 12px;
+    background: var(--bg-header);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+.navigation label:hover, 
+#slide1:checked ~.navigation label[for="slide1"],
+#slide2:checked ~.navigation label[for="slide2"],
+#slide3:checked ~.navigation label[for="slide3"]{
+    background: grey;
+    opacity: 1;
+}
+
+
+
 
 
 /* CSS Responsivo */
@@ -502,34 +543,45 @@ footer a:hover{
     #header {
         position: fixed;
         border-bottom: 1px solid var(--cor-borda);
-        padding: 16px 80px;
+        padding: 16px 96px;
         background: var(--bg-header);
     }
     .nav-mobile {
         display: none;
     }
-    .header-nav {
+    .header-nav { 
         display: flex;
     }
-    #home {
-        padding: 128px 96px 64px 96px; /* VOLTAR AQUI */
+
+    /* ATT */
+    /* .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    } */
+
+    #home,
+    .projetos,
+    .sobre {
+        padding: 128px 96px 64px 96px;
     }
+    
     .main-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    .contato{
+
+    .contato {
         padding: 90px;
     }
-    .contato p{
-        width: 80%;
 
+    .contato p {
+        width: 80%;
     }
-    footer{
+
+    footer {
         margin: 0;
     }
-   
 }
 
 /* 992px */
