@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Definir cores tema Dark */
-:root,
 :root[data-theme="dark"]{
     --bg-header: #222;
     --icone-tema: #f0f0f0;
@@ -532,6 +531,41 @@ footer a:hover{
 #slide3:checked ~.navigation label[for="slide3"]{
     background: grey;
     opacity: 1;
+}
+/* Forms */
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #9A9A9c;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(176, 149, 149, 0.2);
+
+}
+.form-contato label{
+    font-weight: bold;
+    color: #222;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+.form-contato input,
+.form-contato textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--cor-borda);
+    color: var(--bg-header);
+    font-size: 14px;
+    outline: none;  
+    transition: 0.5s ease-in-out;
+}
+.form-contato input:focus,
+.form-contato textarea:focus{
+    border-color: purple;
+    box-shadow: green;
 }
 
 
